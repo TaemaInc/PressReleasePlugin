@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Article
+
+# Model Form Field configuration
+form: $/mathieutanguay/pressrelease/models/article/fields.yaml
+
+# Model Class name
+modelClass: Mathieutanguay\Pressrelease\Models\Article
+
+# Default redirect location
+defaultRedirect: mathieutanguay/pressrelease/articles
+
+# Create page
+create:
+    title: Create Article
+    redirect: mathieutanguay/pressrelease/articles/update/:id
+    redirectClose: mathieutanguay/pressrelease/articles
+
+# Update page
+update:
+    title: Edit Article
+    redirect: mathieutanguay/pressrelease/articles
+    redirectClose: mathieutanguay/pressrelease/articles
+
+# Preview page
+preview:
+    title: Preview Article

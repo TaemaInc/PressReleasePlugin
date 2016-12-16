@@ -1,0 +1,23 @@
+{% set categories = __SELF__.articles %}
+
+<div class="articleList">
+    {% for categoryname, articles in categories %}
+        <div class="col-md-12 center">
+            <h1>{{ ('mathieutanguay.pressrelease::lang.articleList.category.options.' ~ categoryname) | trans }}</h1>
+        </div>
+
+        {% for article in articles %}
+        <div class="article-item">
+            <div class="col-md-1">
+                <img src="{{ article.image | media }}" width="75" />
+            </div>
+            <div class="col-md-11">
+                <h2 class="article-name"><a href="{{ article.url }}" target="_blank">{{ article.name }}</a></h2>
+                <div class="article-description">
+                    {{ article.description | raw }}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% endfor %}
+</div>

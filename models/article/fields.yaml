@@ -1,0 +1,33 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: "Nom"
+        description: "Nom de l'article"
+
+    description:
+        label: "Description"
+        description: "Description de l'article"
+        type: "richeditor"
+
+    url:
+        label: "Lien"
+        description: "Lien URL vers l'article"
+
+    category:
+        label: "Catégorie"
+        description: "Catégorie de l'article"
+        type: "dropdown"
+        options:
+            radio: Radio
+            print: Imprimé
+            tv: Télé
+            web: Web
+
+    image:
+        label: "Image"
+        description: "Image de prévisualisation de l'article"
+        type: "mediafinder"
+        mode: "image"
